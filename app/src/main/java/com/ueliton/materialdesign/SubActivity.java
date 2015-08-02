@@ -1,5 +1,6 @@
 package com.ueliton.materialdesign;
 
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.os.Bundle;
@@ -18,6 +19,9 @@ public class SubActivity extends ActionBarActivity {
 
         mToolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(mToolbar);
+
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override
@@ -39,6 +43,9 @@ public class SubActivity extends ActionBarActivity {
             return true;
         }
 
+        if (id == android.R.id.home){
+            NavUtils.navigateUpFromSameTask(this);
+        }
         return super.onOptionsItemSelected(item);
     }
 }

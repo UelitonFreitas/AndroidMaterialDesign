@@ -11,7 +11,7 @@
         <item name="colorAccent">@color/corDestaque</item>
     </style>
 
-    <style name="MinhaBarraDeFerramentas" parent="ThemeOverlay.AppCompat.Light">
+    <style name="MinhaBarraDeFerramentas" parent="ThemeOverlay.AppCompat.Dark">
         <item name="android:textColorPrimary">#FFFFFF</item>
         <item name="android:textColorSecondary">#B3FFFF</item>
     </style>
