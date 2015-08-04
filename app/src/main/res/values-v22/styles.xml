@@ -6,6 +6,7 @@
         <item name="android:colorPrimary">@color/corPrimaria</item>
         <item name="android:colorPrimaryDark">@color/corPrimariaEscura</item>
         <item name="android:colorAccent">@color/corDestaque</item>
+        <item name="android:windowTranslucentStatus">true</item>
     </style>
 
 </resources>
