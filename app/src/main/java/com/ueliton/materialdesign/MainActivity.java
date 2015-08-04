@@ -16,7 +16,7 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.app_main_appbar);
 
         mToolBar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(mToolBar);
