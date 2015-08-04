@@ -1,6 +1,7 @@
 package com.ueliton.materialdesign;
 
 import android.content.Intent;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -19,6 +20,13 @@ public class MainActivity extends ActionBarActivity {
 
         mToolBar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(mToolBar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        NavigationDrawerFragment drawerFragment = (NavigationDrawerFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.fragment_navigation_drawer);
+
+        drawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawe_layout), mToolBar);
     }
 
     @Override
