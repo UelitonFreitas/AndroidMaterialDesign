@@ -5,9 +5,25 @@
     android:background="#EEE"
     tools:context="com.ueliton.materialdesign.NavigationDrawerFragment">
 
-    <ImageView
-        android:layout_width="480dp"
-        android:layout_height="320dp"
-        android:src="@drawable/img_bonito"/>
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:src="@drawable/img_bonito"/>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/drawerList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
 
 </RelativeLayout>

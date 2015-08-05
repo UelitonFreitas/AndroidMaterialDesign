@@ -7,11 +7,16 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -22,8 +27,10 @@ public class NavigationDrawerFragment extends Fragment {
     public static final String NOME_ARQUIVO_PRF = "preferencias";
     public static final String CHAVE_USUARIO_APRENDEU_DRAWER = "usuario_aprendeu_drawer";
 
+    private RecyclerView mRecyclerView;
     private ActionBarDrawerToggle mDrawerToggle;
     private DrawerLayout mDrawerLayout;
+    private CidadeAdapter mCidadeAdapter;
 
     private boolean mUsuarioAprendeuDrawer;
     private boolean mEstadoDaInstanciaSalvo;
@@ -44,13 +51,40 @@ public class NavigationDrawerFragment extends Fragment {
         if (savedInstanceState != null){
             mEstadoDaInstanciaSalvo = true;
         }
+
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
+
+        View layout = inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
+
+        RecyclerView mRecyclerView = (RecyclerView) layout.findViewById(R.id.drawerList);
+
+        mCidadeAdapter = new CidadeAdapter(getActivity(), pegaDados());
+
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        mRecyclerView.setLayoutManager(layoutManager);
+
+        mRecyclerView.setAdapter(mCidadeAdapter);
+
+        return layout;
+    }
+
+    public static List<Cidade> pegaDados(){
+        List<Cidade> listaDeCidades = new ArrayList<Cidade>();
+        String[] nomes = {"Bonito", "Corumba", "Jardim"};
+        int[] icones = {R.drawable.ic_agencias, R.drawable.ic_agencias, R.drawable.ic_agencias};
+
+        for (int i = 0; i < nomes.length; i++) {
+            listaDeCidades.add(new Cidade(nomes[i], icones[i]));
+        }
+
+        return listaDeCidades;
     }
 
 
