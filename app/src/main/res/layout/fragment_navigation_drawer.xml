@@ -1,29 +1,39 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<org.lucasr.dspec.DesignSpecFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EEE"
-    tools:context="com.ueliton.materialdesign.NavigationDrawerFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:designSpec="@raw/spec">
 
-    <LinearLayout
-        android:id="@+id/header"
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:background="#fbf6ff"
+        tools:context="com.ueliton.materialdesign.NavigationDrawerFragment">
 
-        <ImageView
+        <LinearLayout
+            android:id="@+id/header"
             android:layout_width="match_parent"
-            android:layout_height="320dp"
-            android:src="@drawable/img_bonito"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:src="@drawable/img_bonito" />
 
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/drawerList"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/drawerList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        </android.support.v7.widget.RecyclerView>
-    </LinearLayout>
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
 
 
-</RelativeLayout>
+    </RelativeLayout>
+
+</org.lucasr.dspec.DesignSpecFrameLayout>
+

@@ -5,13 +5,13 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="AppTheme.Base" parent="Theme.AppCompat.NoActionBar">
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/corPrimaria</item>
         <item name="colorPrimaryDark">@color/corPrimariaEscura</item>
         <item name="colorAccent">@color/corDestaque</item>
     </style>
 
-    <style name="MinhaBarraDeFerramentas" parent="ThemeOverlay.AppCompat.Dark">
+    <style name="MinhaBarraDeFerramentas" parent="ThemeOverlay.AppCompat.Light">
         <item name="android:textColorPrimary">#FFFFFF</item>
         <item name="android:textColorSecondary">#B3FFFF</item>
     </style>
