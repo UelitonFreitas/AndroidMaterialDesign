@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     
-    <color name="corPrimaria">#F44336</color>
-    <color name="corPrimariaEscura">#D32F2F</color>
-    <color name="corDestaque">#2FBF71</color>
+    <color name="corPrimaria">#03A9F4</color>
+    <color name="corPrimariaEscura">#0288D1</color>
+    <color name="corDestaque">#FF5722</color>
+    <color name="textoPrimario">#212121</color>
     
 </resources>

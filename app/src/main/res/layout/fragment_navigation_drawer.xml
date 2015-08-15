@@ -1,16 +1,10 @@
-<org.lucasr.dspec.DesignSpecFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:designSpec="@raw/spec">
-
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#fbf6ff"
-        tools:context="com.ueliton.materialdesign.NavigationDrawerFragment">
+        tools:context="com.ueliton.materialdesign.fragmentos.NavigationDrawerFragment">
 
         <LinearLayout
             android:id="@+id/header"
@@ -20,7 +14,7 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="320dp"
+                android:layout_height="250dp"
                 android:src="@drawable/img_bonito" />
 
 
@@ -35,5 +29,4 @@
 
     </RelativeLayout>
 
-</org.lucasr.dspec.DesignSpecFrameLayout>
 

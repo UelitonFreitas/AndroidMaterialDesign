@@ -1,4 +1,4 @@
-package com.ueliton.materialdesign;
+package com.ueliton.materialdesign.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -7,6 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.ueliton.materialdesign.modelos.Cidade;
+import com.ueliton.materialdesign.R;
 
 import java.util.Collections;
 import java.util.List;
@@ -40,8 +43,8 @@ public class CidadeAdapter extends RecyclerView.Adapter<CidadeAdapter.MinhaViewH
 
         Cidade cidadeAtual = listaDeCidades.get(position);
 
-        holder.texto.setText(cidadeAtual.nome);
-        holder.icone.setImageResource(cidadeAtual.idIcone);
+        holder.texto.setText(cidadeAtual.getNome());
+        holder.icone.setImageResource(cidadeAtual.getIdIcone());
     }
 
     @Override

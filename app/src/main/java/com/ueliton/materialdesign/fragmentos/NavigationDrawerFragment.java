@@ -1,4 +1,4 @@
-package com.ueliton.materialdesign;
+package com.ueliton.materialdesign.fragmentos;
 
 
 import android.content.Context;
@@ -10,10 +10,13 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.ueliton.materialdesign.modelos.Cidade;
+import com.ueliton.materialdesign.adapters.CidadeAdapter;
+import com.ueliton.materialdesign.R;
 
 import java.util.ArrayList;
 import java.util.List;
