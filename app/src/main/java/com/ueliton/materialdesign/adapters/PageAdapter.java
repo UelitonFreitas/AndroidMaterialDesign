@@ -13,18 +13,18 @@ import com.ueliton.materialdesign.fragmentos.TabFragment;
  */
 public class PageAdapter extends FragmentPagerAdapter {
 
-    String[] tabs;
+    String[] titulosDasTabs;
 
     public PageAdapter(Context contexto, FragmentManager fm) {
         super(fm);
-        tabs = contexto.getResources().getStringArray(R.array.tabs);
+        titulosDasTabs = contexto.getResources().getStringArray(R.array.tabs);
     }
 
 
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return tabs[position];
+        return titulosDasTabs[position];
     }
 
     @Override

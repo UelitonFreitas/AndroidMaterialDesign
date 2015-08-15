@@ -47,7 +47,29 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void inicializaTabs() {
+
         mSlidingTabLayout = (SlidingTabLayout) findViewById(R.id.tabs);
+        distribuiOsTamanhosDasTabsIgualmenteNaPagina();
+        adicionaCoresAosCabecalhoDasTabs();
+    }
+
+
+    private void adicionaCoresAosCabecalhoDasTabs() {
+        adicionaCorDefundo();
+        adicionaCorIndicativaDaTab();
+
+    }
+
+    private void adicionaCorIndicativaDaTab() {
+        mSlidingTabLayout.setSelectedIndicatorColors(getResources().getColor(R.color.corDestaque));
+    }
+
+    private void adicionaCorDefundo() {
+        mSlidingTabLayout.setBackgroundColor(getResources().getColor(R.color.corPrimaria));
+    }
+
+    private void distribuiOsTamanhosDasTabsIgualmenteNaPagina() {
+        mSlidingTabLayout.setDistributeEvenly(true);
     }
 
     private void configuraViewPager() {
